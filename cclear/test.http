@@ -1,0 +1,5 @@
+###
+
+# @curl-insecure 
+GET https://10.51.10.201/api/info/v1 HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}

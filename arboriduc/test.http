@@ -1,0 +1,13 @@
+###
+
+POST https://localhost/api/logs/v1/receivers/syslog HTTP/1.1
+Content-Type: application/json
+
+{
+  "host": "lin-jchen-01.int.cpacket.com",
+  "port": 8089,
+  "status": "enabled",
+  "transport": "tcpTls",
+  "filters": [],
+  "verify": true
+}

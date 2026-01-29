@@ -1,0 +1,8 @@
+###
+
+PUT http://localhost:3000/api/crypto/v1/tls/check HTTP/1.1
+Content-Type: application/json
+
+{
+  "domain": "lin-jchen-01.int.cpacket.com"
+}
