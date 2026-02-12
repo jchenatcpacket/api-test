@@ -27,3 +27,14 @@ Content-Type: text/plain
 < /home/jchen/Downloads/lin-jchen-01.int.cpacket.com/lin-jchen-01.int.cpacket.com/certchain.cer
 
 ------WebKitFormBoundary{{$timestamp}}--
+
+###
+//tls check
+# @curl-insecure 
+PUT {{host}}/api/crypto/v1/tls/check HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{
+    "domain": "Automation-35.int.cpacket.com"
+}
