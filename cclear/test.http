@@ -1,5 +1,29 @@
+@host=https://localhost
+@host2=https://10.51.10.201
+
 ###
 
 # @curl-insecure 
-GET https://10.51.10.201/api/info/v1 HTTP/1.1
+GET {{host}}/api/info/v1 HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
+//get cerchain file
+# @curl-insecure 
+GET {{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
+//upload cerchain file
+# @curl-insecure 
+PUT {{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
+
+------WebKitFormBoundary{{$timestamp}}
+Content-Disposition: form-data; name="bundle"; filename="certchain.cer"
+Content-Type: text/plain
+
+< /home/jchen/Downloads/lin-jchen-01.int.cpacket.com/lin-jchen-01.int.cpacket.com/certchain.cer
+
+------WebKitFormBoundary{{$timestamp}}--
