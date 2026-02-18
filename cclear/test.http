@@ -1,22 +1,19 @@
-@host=https://localhost
-@host2=https://10.51.10.201
-
 ###
 
 # @curl-insecure 
-GET {{host}}/api/info/v1 HTTP/1.1
+GET https://{{HOST}}/api/info/v2 HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 
 ###
 //get cerchain file
 # @curl-insecure 
-GET {{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+GET https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 
 ###
 //upload cerchain file
 # @curl-insecure 
-PUT {{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+PUT https://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 
@@ -24,17 +21,45 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 Content-Disposition: form-data; name="bundle"; filename="certchain.cer"
 Content-Type: text/plain
 
-< /home/jchen/Downloads/lin-jchen-01.int.cpacket.com/lin-jchen-01.int.cpacket.com/certchain.cer
+< /home/jchen/Downloads/Automation-35.int.cpacket.com/certchain.cer
 
 ------WebKitFormBoundary{{$timestamp}}--
 
 ###
+//delete cerchain file
+# @curl-insecure 
+DELETE https://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
 //tls check
 # @curl-insecure 
-PUT {{host}}/api/crypto/v1/tls/check HTTP/1.1
+PUT https://{{host}}/api/crypto/v1/tls/check HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 Content-Type: application/json
 
 {
     "domain": "Automation-35.int.cpacket.com"
 }
+
+###
+//add tls syslog receiver
+# @curl-insecure 
+POST https://{{HOST}}/api/logs/v1/receivers/syslog HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{
+	"host": "Automation-35.int.cpacket.com",
+	"port": 2000,
+	"status": "enabled",
+	"transport": "tcpTls",
+	"filters": [],
+	"verify": false
+}
+
+###
+//get tls syslog receiver
+# @curl-insecure 
+GET https://{{HOST}}/api/logs/v1/receivers/syslog HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
