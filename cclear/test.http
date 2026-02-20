@@ -13,7 +13,7 @@ Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 ###
 //upload cerchain file
 # @curl-insecure 
-PUT https://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+PUT https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 
@@ -28,13 +28,13 @@ Content-Type: text/plain
 ###
 //delete cerchain file
 # @curl-insecure 
-DELETE https://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+DELETE https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 
 ###
 //tls check
 # @curl-insecure 
-PUT https://{{host}}/api/crypto/v1/tls/check HTTP/1.1
+PUT https://{{HOST}}/api/crypto/v1/tls/check HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 Content-Type: application/json
 
@@ -51,11 +51,11 @@ Content-Type: application/json
 
 {
 	"host": "Automation-35.int.cpacket.com",
-	"port": 2000,
+	"port": 2001,
 	"status": "enabled",
 	"transport": "tcpTls",
 	"filters": [],
-	"verify": false
+	"verify": true
 }
 
 ###
@@ -63,3 +63,19 @@ Content-Type: application/json
 # @curl-insecure 
 GET https://{{HOST}}/api/logs/v1/receivers/syslog HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
+//update a syslog receiver
+# @curl-insecure 
+PUT https://{{HOST}}/api/logs/v1/receivers/syslog/183f7a52-de15-49a7-8713-402a12ec425e HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{
+	"host": "Automation-35.int.cpacket.com",
+	"port": 2001,
+	"status": "enabled",
+	"transport": "tcpTls",
+	"filters": [],
+	"verify": true
+}
