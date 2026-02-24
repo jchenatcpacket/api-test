@@ -6,12 +6,16 @@ PUT http://{{host}}/api/crypto/v1/tls/check HTTP/1.1
 Content-Type: application/json
 
 {
-  "domain": "Automation-35.int.cpacket.com"
+  "domain": "automation-35.int.cpacket.com"
 }
 
 ###
 //get cerchain file
 GET http://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
+
+###
+//delete cerchain file
+DELETE http://{{host}}/api/crypto/v1/tls/authorities HTTP/1.1
 
 ###
 //upload cerchain file
