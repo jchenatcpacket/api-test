@@ -65,17 +65,20 @@ GET https://{{HOST}}/api/logs/v1/receivers/syslog HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 
 ###
+
+@receiver_id=88835cc0-9147-416e-a5ee-4a9aec1a435c
 //update a syslog receiver
 # @curl-insecure 
-PUT https://{{HOST}}/api/logs/v1/receivers/syslog/183f7a52-de15-49a7-8713-402a12ec425e HTTP/1.1
+PUT https://{{HOST}}/api/logs/v1/receivers/syslog/{{receiver_id}} HTTP/1.1
 Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
 Content-Type: application/json
 
 {
-	"host": "Automation-35.int.cpacket.com",
-	"port": 2001,
+	"host": "automation-35.int.cpacket.com",
+	"port": 6666,
 	"status": "enabled",
 	"transport": "tcpTls",
 	"filters": [],
-	"verify": true
+	"verify": false
 }
+

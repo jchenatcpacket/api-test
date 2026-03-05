@@ -12,3 +12,20 @@ Content-Type: application/json
   "filters": [],
   "verify": true
 }
+
+###
+
+@host=10.51.42.115
+@receiver_id=88835cc0-9147-416e-a5ee-4a9aec1a435c
+# create a receiver
+PUT https://{{host}}/api/logs/v1/receivers/syslog/{{receiver_id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "host": "automation-25.int.cpacket.com",
+  "port": 6666,
+  "status": "enabled",
+  "transport": "tcpTls",
+  "filters": [],
+  "verify": false
+}
