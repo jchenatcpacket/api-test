@@ -1,0 +1,9 @@
+name: info
+url: https://localhost/api/licensing/v2/license/info
+auth:
+  type: basic
+  basic:
+    username: $CCLEAR_USERNAME
+    password: $CCLEAR_PASSWORD
+options:
+  verify_ssl: false
