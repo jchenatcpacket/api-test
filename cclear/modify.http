@@ -1,0 +1,33 @@
+@host=localhost
+@device_ip="sapphire5-dev.int.cpacket.com"
+
+
+###
+//add a cstor
+# @curl-insecure 
+POST https://{{host}}/rt/data/cstor/modify HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{"ip":{{device_ip}},"name":"sap","auth_type":"basic","verify_ssl":false}
+
+
+###
+//auth a cstor# @curl-insecure 
+POST https://{{HOST}}/api/cstor/devauth/modify HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{"device_id":"6a0ba53cb56f9ad0396dcd9b","password":"cpacketpw","username":"cpacket"}
+
+
+###
+//delete a cstor
+# @curl-insecure 
+POST https://{{HOST}}/rt/data/cstor/delete HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{
+	"ids": ["6a0b9a5ab56f9ad0396dcd9a"]
+}
