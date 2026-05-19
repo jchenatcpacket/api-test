@@ -1,0 +1,38 @@
+###
+//get cerchain file
+# @curl-insecure 
+GET https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
+//upload cerchain file
+# @curl-insecure 
+PUT https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
+
+------WebKitFormBoundary{{$timestamp}}
+Content-Disposition: form-data; name="bundle"; filename="certchain.cer"
+Content-Type: text/plain
+
+< /home/jchen/Downloads/Automation-35.int.cpacket.com/certchain.cer
+
+------WebKitFormBoundary{{$timestamp}}--
+
+###
+//delete cerchain file
+# @curl-insecure 
+DELETE https://{{HOST}}/api/crypto/v1/tls/authorities HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+
+###
+//tls check
+# @curl-insecure 
+PUT https://{{HOST}}/api/crypto/v1/tls/check HTTP/1.1
+Authorization: Basic {{CCLEAR_USERNAME}}:{{CCLEAR_PASSWORD}}
+Content-Type: application/json
+
+{
+    "domain": "Automation-35.int.cpacket.com"
+}
+
