@@ -1,0 +1,8 @@
+@host=0.0.0.0:8899
+
+###
+GET http://{{host}}/admin/ HTTP/1.1
+
+
+###
+GET https://jsonplaceholder.typicode.com/todos/1 HTTP/1.1

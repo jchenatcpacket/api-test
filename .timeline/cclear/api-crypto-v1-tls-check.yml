@@ -1,0 +1,396 @@
+- id: 53e6022f-e717-4ac6-8527-8f3ff2db4d2d
+  timestamp: 1792787996803
+  envName: development
+  network:
+    - timeMs: 0.032097999937832355
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.09446399996522814
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.24596599990036339
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5219.396077999962
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5219.556098999921
+      type: body
+      message: Body received - 337 bytes
+    - timeMs: 5219.628997999942
+      type: complete
+      message: Completed in 5220ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"lin-jchen-01.int.cpacket.com:8089"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:39:22 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"lin-jchen-01.int.cpacket.com:8089","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5219.734827999957
+    size: 337
+- id: c8b41250-1ed7-465c-bc2c-ca223436ea6d
+  timestamp: 1792787961496
+  envName: development
+  network:
+    - timeMs: 0.030709999962709844
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.1965059998910874
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.5601739999838173
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5225.437510999967
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5225.744570999988
+      type: body
+      message: Body received - 337 bytes
+    - timeMs: 5225.812839999911
+      type: complete
+      message: Completed in 5226ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"lin-jchen-01.int.cpacket.com:8089"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:38:46 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"lin-jchen-01.int.cpacket.com:8089","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5225.9489549999125
+    size: 337
+- id: 1c660e97-dc52-4048-ac1b-4fb8662e8784
+  timestamp: 1792787894373
+  envName: development
+  network:
+    - timeMs: 0.07468399999197572
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.20990900008473545
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.5262339999899268
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5214.99265800009
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5215.164974000072
+      type: body
+      message: Body received - 340 bytes
+    - timeMs: 5215.228313000058
+      type: complete
+      message: Completed in 5215ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"pjanjanam-dev01.int.cpacket.com:8089"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:37:39 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"pjanjanam-dev01.int.cpacket.com:8089","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5215.380112000043
+    size: 340
+- id: 388ee8d0-c640-407e-8991-ec1bebaf9a45
+  timestamp: 1792787460577
+  envName: development
+  network:
+    - timeMs: 0.011484999966342002
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.06475499999942258
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.2020059999777004
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5237.120363999973
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5237.219658999995
+      type: body
+      message: Body received - 341 bytes
+    - timeMs: 5237.244141999981
+      type: complete
+      message: Completed in 5237ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"pjanjanam-dev01.int.cpacket.com:15961"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:30:25 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"pjanjanam-dev01.int.cpacket.com:15961","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5237.308865999978
+    size: 341
+- id: b68c8ed6-8883-4011-89ef-f32ea3fbb48a
+  timestamp: 1792787431571
+  envName: development
+  network:
+    - timeMs: 0.015478999994229525
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.07045699999434873
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.2279899999848567
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5227.370540999982
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5227.493423999986
+      type: body
+      message: Body received - 341 bytes
+    - timeMs: 5227.560032999987
+      type: complete
+      message: Completed in 5228ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"pjanjanam-dev01.int.cpacket.com:15961"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:29:56 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"pjanjanam-dev01.int.cpacket.com:15961","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5227.636314999982
+    size: 341
+- id: 3fe9bf69-3adc-49f8-a6c2-6bb66d5056d2
+  timestamp: 1792787374815
+  envName: development
+  network:
+    - timeMs: 0.030396999994991347
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.13959000000613742
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 0.48332099997787736
+      type: request
+      message: POST https://10.51.10.232/api/crypto/v1/tls/check
+    - timeMs: 5208.144482000003
+      type: response
+      message: 200 OK - 11 headers
+    - timeMs: 5208.282169999991
+      type: body
+      message: Body received - 341 bytes
+    - timeMs: 5208.336926999997
+      type: complete
+      message: Completed in 5208ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.232/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"pjanjanam-dev01.int.cpacket.com:15961"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      access-control-allow-credentials: '[REDACTED]'
+      access-control-allow-headers: DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      access-control-allow-methods: GET, POST, OPTIONS
+      cache-control: no-store
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 23 Oct 2026 20:29:00 GMT
+      server: nginx/1.30.4
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+    body: >-
+      {"status":"success","data":{"domain":"pjanjanam-dev01.int.cpacket.com:15961","upstreamStatus":"ERROR","error":{"errorType":"Tls","message":"Error
+      parsing client key \"\\'\\'\"","context":"error:1E08010C:DECODER
+      routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:103:No
+      supported data to decode. Input type: PEM"}}}
+    timeMs: 5208.543903999991
+    size: 341
+- id: 67c0ed74-bd57-48b4-bbc4-eb3a4e73d426
+  timestamp: 1792787365903
+  envName: development
+  network:
+    - timeMs: 0.133308999997098
+      type: proxy
+      message: 'Proxy: direct'
+    - timeMs: 0.7891499999968801
+      type: tls
+      message: TLS verification disabled by request
+    - timeMs: 3.7280290000198875
+      type: request
+      message: POST https://10.51.10.179/api/crypto/v1/tls/check
+    - timeMs: 60090.305884
+      type: response
+      message: 504 Gateway Time-out - 5 headers
+    - timeMs: 60091.82729800002
+      type: body
+      message: Body received - 167 bytes
+    - timeMs: 60091.92556200002
+      type: complete
+      message: Completed in 60092ms
+  request:
+    id: cclear/api-crypto-v1-tls-check
+    name: /api/crypto/v1/tls/check
+    method: POST
+    url: https://10.51.10.179/api/crypto/v1/tls/check
+    headers: {}
+    params: []
+    pathParams: []
+    body: '{"domain":"pjanjanam-dev01.int.cpacket.com:15961"}'
+    bodyType: json
+    auth:
+      type: basic
+      user: cpacket
+      pass: '[REDACTED]'
+  response:
+    status: 504
+    statusText: Gateway Time-out
+    headers:
+      connection: keep-alive
+      content-length: '167'
+      content-type: text/html
+      date: Fri, 23 Oct 2026 20:29:25 GMT
+      server: nginx/1.30.4
+    body: "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.30.4</center>\r\n</body>\r\n</html>\r\n"
+    timeMs: 60092.43252100001
+    size: 167

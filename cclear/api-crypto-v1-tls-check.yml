@@ -1,0 +1,8 @@
+name: /api/crypto/v1/tls/check
+method: POST
+url: https://10.51.10.179/api/crypto/v1/tls/check
+timeout: 0
+followRedirects: true
+maxRedirects: 5
+body: ''
+body_type: none
