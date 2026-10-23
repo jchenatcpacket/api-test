@@ -1,6 +1,0 @@
-lastRequest: cclear/info
-expanded_folders:
-  - cclear
-cclear/info:
-  request: settings
-  response: body
